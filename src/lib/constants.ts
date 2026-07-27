@@ -1,5 +1,5 @@
 export const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbx3IjgAS-dGUiCZHlyWutF4iBxVEgQBPpOM_9eCZXg868C32KWp8CI3PFu7hnsDHjTerg/exec";
+  "https://script.google.com/macros/s/AKfycbwCMHRvdGDKczYvSBTY2J3-tLQ7QPwmhU72lN6QLLAnrReNK6Q7atkzA3TH6sSOkuVrvw/exec";
 
 export const PRICE_PER_PACK = 699;
 export const DELIVERY = 100;
