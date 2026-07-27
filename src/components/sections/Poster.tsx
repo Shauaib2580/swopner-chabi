@@ -1,0 +1,19 @@
+import posterAsset from "@/assets/poster.jpeg";
+
+export function Poster() {
+  return (
+    <div className="mx-auto max-w-[640px] px-5 pt-5">
+      <div className="rounded-2xl overflow-hidden border border-[#2E3040] shadow-2xl">
+        <img
+          src={posterAsset}
+          alt="ছাতা + স্লিপার কম্বো অফার ৬৯৯ টাকা"
+          width={1200}
+          height={1200}
+          fetchPriority="high"
+          decoding="async"
+          className="w-full block h-auto"
+        />
+      </div>
+    </div>
+  );
+}
