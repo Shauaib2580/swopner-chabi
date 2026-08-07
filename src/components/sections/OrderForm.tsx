@@ -45,7 +45,7 @@ export function OrderForm({ qty, setQty }: OrderFormProps) {
     if (!form.district) return "জেলা নির্বাচন করুন";
     if (!form.thana.trim()) return "থানা দিন";
     if (!form.address.trim()) return "ঠিকানা দিন";
-    if (!form.size) return "স্লিপারের সাইজ নির্বাচন করুন";
+    // if (!form.size) return "স্লিপারের সাইজ নির্বাচন করুন";
     if (qty < 1) return "কমপক্ষে ১ প্যাক নির্বাচন করুন";
     return "";
   };
@@ -71,7 +71,7 @@ export function OrderForm({ qty, setQty }: OrderFormProps) {
       district: form.district,
       thana: form.thana.trim(),
       address: form.address.trim(),
-      product: "BMW ছাতা + কমফোর্ট স্লিপার কম্বো",
+      product: "BMW ছাতা + কমফোর্ট স্লিপার",
       color: "Black",
       size: form.size,
       qty: String(qty),
@@ -180,7 +180,8 @@ export function OrderForm({ qty, setQty }: OrderFormProps) {
             placeholder="বাড়ি নং, রোড, এলাকা"
           />
         </Field>
-        <Field label="স্লিপারের সাইজ" required>
+        {/* স্লিপারের সাইজ */}
+        {/* <Field label="স্লিপারের সাইজ" required>
           <select value={form.size} onChange={update("size")}>
             <option value="">সাইজ নির্বাচন করুন</option>
             {SIZES.map((s) => (
@@ -189,7 +190,7 @@ export function OrderForm({ qty, setQty }: OrderFormProps) {
               </option>
             ))}
           </select>
-        </Field>
+        </Field> */}
 
         <div className="mb-4">
           <label className="block text-[13.5px] text-[#9EA0B5] mb-1.5">

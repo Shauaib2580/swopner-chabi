@@ -1,5 +1,8 @@
 import { PRICE_PER_PACK, DELIVERY } from "@/lib/constants";
 import { scrollToOrder } from "@/lib/utils";
+import quality1 from "@/assets/1.jpeg";
+import quality2 from "@/assets/2.jpeg";
+import quality3 from "@/assets/3.jpeg";
 
 interface HeroSectionProps {
   qty: number;
@@ -20,18 +23,16 @@ export function HeroSection({ qty }: HeroSectionProps) {
       />
       <div className="relative mx-auto max-w-[640px] px-5 pt-8 pb-6">
         <span className="inline-block text-[12.5px] font-semibold text-[#E7A93F] bg-[rgba(231,169,63,0.12)] border border-[rgba(231,169,63,0.35)] px-3 py-1 rounded-full mb-3">
-          ⚡ কম্বো অফার — সীমিত সময়ের জন্য
+          ⚡ অফার — সীমিত সময়ের জন্য
         </span>
         <h1 className="font-display text-[28px] sm:text-[32px] leading-tight mb-2">
-          <span className="text-[#7EAEF2]">BMW স্টাইল ছাতা</span> +{" "}
-          <span className="text-[#E7A93F]">কমফোর্ট স্লিপার</span>
+          <span className="text-[#7EAEF2]">BMW স্টাইল ছাতা</span>
         </h1>
         <p className="text-[#9EA0B5] text-[15px] mb-5">
-          এক অর্ডারে দুটি প্রিমিয়াম প্রোডাক্ট — বৃষ্টি-রোদ দুই জায়গাতেই স্টাইল আর আরাম,
-          একসাথে।
+          বৃষ্টি-রোদ দুই জায়গাতেই স্টাইল আর আরাম, একসাথে।
         </p>
 
-        <div className="grid grid-cols-2 gap-3 mb-5">
+        <div className="mb-5">
           <div
             className="rounded-2xl p-4 text-center border border-[#2E3040]"
             style={{ background: "linear-gradient(160deg, #172038, #0F1422)" }}
@@ -40,14 +41,6 @@ export function HeroSection({ qty }: HeroSectionProps) {
             <h3 className="font-display text-[16px] text-[#8FB4EE] mb-1">প্রিমিয়াম ছাতা</h3>
             <p className="text-[12.5px] text-[#9EA0B5]">Windproof, Auto Open</p>
           </div>
-          <div
-            className="rounded-2xl p-4 text-center border border-[#2E3040]"
-            style={{ background: "linear-gradient(160deg, #2A2113, #1B1712)" }}
-          >
-            <div className="text-4xl mb-2">🩴</div>
-            <h3 className="font-display text-[16px] text-[#E7A93F] mb-1">কমফোর্ট স্লিপার</h3>
-            <p className="text-[12.5px] text-[#9EA0B5]">নরম সোল, Anti-slip</p>
-          </div>
         </div>
 
         <div className="bg-[#1A1C28] border border-[#2E3040] rounded-2xl p-4 flex items-center justify-between mb-4 gap-3">
@@ -55,7 +48,7 @@ export function HeroSection({ qty }: HeroSectionProps) {
             <div className="text-[#9EA0B5] line-through text-[14px]">১৪৯৯ টাকা</div>
             <div className="font-display text-[28px] leading-none mt-1">
               ৳৬৯৯{" "}
-              <small className="text-[13px] text-[#9EA0B5] font-normal">/ কম্বো প্যাক</small>
+              <small className="text-[13px] text-[#9EA0B5] font-normal">/ প্যাক</small>
             </div>
           </div>
           <div className="text-right text-[12.5px] text-[#9EA0B5]">
@@ -93,6 +86,30 @@ export function HeroSection({ qty }: HeroSectionProps) {
               আজকের অফারে অর্ডার করলে পাচ্ছেন একটি বিশেষ সারপ্রাইজ গিফট — একদম ফ্রি, অর্ডারের
               সাথেই।
             </p>
+          </div>
+        </div>
+
+        <div className="mt-5">
+          <h4 className="font-display text-[16px] text-[#8FB4EE] mb-3">
+            ☂️ আমাদের ছাতার কোয়ালিটি
+          </h4>
+          <div className="grid grid-cols-3 gap-2.5">
+            {[quality1, quality2, quality3].map((img, i) => (
+              <div
+                key={i}
+                className="rounded-xl overflow-hidden border border-[#2E3040] bg-[#101018]"
+              >
+                <img
+                  src={img}
+                  alt={`ছাতার কোয়ালিটি ${i + 1}`}
+                  width={400}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto block"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

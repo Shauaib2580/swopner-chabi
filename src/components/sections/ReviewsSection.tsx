@@ -43,9 +43,9 @@ export function ReviewsSection() {
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${active * 88}%)` }}
         >
-          {REVIEWS.map((r) => (
+          {REVIEWS.map((r, i) => (
             <div
-              key={r.name}
+              key={`${r.name}-${i}`}
               className="shrink-0 w-[85%] mr-[3%] bg-[#1A1C28] border border-[#2E3040] rounded-2xl p-4 select-none"
             >
               <div className="text-[#E7A93F] text-[13px] mb-1">⭐⭐⭐⭐⭐</div>
